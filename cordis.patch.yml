@@ -1,0 +1,8 @@
+# dsh-turn-model bundle patch: one host row over the Web or Desktop profile.
+# The row name resolves from the profile's own node_modules where
+# `dsh plugin --profile <profile> add dsh-turn-model` installed this package.
+# 这一行只负责把插件挂上；「启用/停用」交给 profile 的 package.json
+# dsh.profile.bundles 清单（插件面板的开关写的就是它），不要在这里写 disabled。
+- insert:
+    - id: turn-model
+      name: dsh-turn-model

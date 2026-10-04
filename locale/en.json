@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Turn model label (dsh-turn-model)",
+    "description": "Shows which model answered each completed turn, as a plain text line above the turn actions"
+  }
+}

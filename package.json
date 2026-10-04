@@ -1,0 +1,84 @@
+{
+  "name": "dsh-turn-model",
+  "version": "0.1.0",
+  "description": "在 DeepSeek Harness 每个已完成回合的操作行前显示该回合实际使用的模型名（纯文本，无图标）。Show which model answered each completed turn.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "lib",
+    "locale",
+    "cordis.patch.yml",
+    "icon.svg"
+  ],
+  "icon": "icon.svg",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "client-plugin",
+    "model",
+    "turn",
+    "conversation",
+    "ui"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wajotary/dsh-turn-model.git"
+  },
+  "homepage": "https://github.com/wajotary/dsh-turn-model#readme",
+  "bugs": {
+    "url": "https://github.com/wajotary/dsh-turn-model/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    },
+    "engines": {
+      "dsh": ">=0.2.0-rc.1"
+    },
+    "compatibility": {
+      "dshReleases": {
+        "0.2.0-rc.2": "compatible"
+      }
+    }
+  },
+  "dshhub": {
+    "schemaVersion": 1,
+    "displayName": "逐轮模型标注 (dsh-turn-model)",
+    "summary": "在每个已完成回合的操作行前显示该回合实际回答的模型名；纯文本、无依赖、不联网、不改 DSH 源码。",
+    "categories": [
+      "Web UI",
+      "会话"
+    ],
+    "surfaces": [
+      "web"
+    ],
+    "capabilities": {
+      "provides": []
+    },
+    "compatibility": {
+      "dsh": ">=0.2.0-rc.1",
+      "node": ">=20"
+    },
+    "permissions": {
+      "network": []
+    }
+  }
+}
